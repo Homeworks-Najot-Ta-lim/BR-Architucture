@@ -34,6 +34,13 @@ header {
     height: 8vh;
     padding: 0px 30px;
     z-index: 9999;
+    @media only screen and (max-width: 480px) {
+        height: 12vh;
+        @include flex($justify: space-around, $align: center,$direction: column);
+    }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+        height: 10vh;
+    }
 
     & ul {
         @include flex($justify: center, $align: center);
@@ -112,6 +119,9 @@ main {
 
         width: 95%;
         margin: 20px;
+        @media only screen and (max-width: 480px) {
+            margin: 0 auto;
+        }
 
         & #about-info{
             margin-block: 25px;
@@ -135,10 +145,18 @@ main {
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
 
+            @media only screen and (max-width: 480px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            @media only screen and (min-width: 481px) and (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media only screen and (min-width: 769px) and (max-width: 992px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
 
             & .home-images{
-                position: relative;
-                border: 1px solid black;            
+                position: relative;           
 
             & #hosue-info-span {
                     position: absolute;
@@ -160,6 +178,17 @@ main {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
+
+            
+            @media only screen and (max-width: 480px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            @media only screen and (min-width: 481px) and (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media only screen and (min-width: 769px) and (max-width: 992px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
 
      
 
@@ -235,8 +264,6 @@ main {
 }
 
 
-
-
 footer {
     @include flex($justify: center, $align: center);
     height: 13vh;
@@ -253,9 +280,4 @@ footer {
         }
     }
 }
-
-
-
-
-
 
