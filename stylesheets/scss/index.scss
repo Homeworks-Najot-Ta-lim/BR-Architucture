@@ -122,6 +122,9 @@ main {
         @media only screen and (max-width: 480px) {
             margin: 0 auto;
         }
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+            margin: 0 auto;
+        }
 
         & #about-info{
             margin-block: 25px;
